@@ -6,12 +6,9 @@
 
 - 🎨 使用火山引擎 SeeDream 4.0 模型生成高质量图片
 - 🔧 支持自定义尺寸、智能参考图等
-- 📝 无需编写复杂提示词，AI自动根据需求生成生图提示词
+- 📝 无需编写复杂提示词，AI 自动根据需求生成生图提示词
 - 🔌 MCP 协议支持，可在 Cursor、Claude Desktop 等客户端中使用
 
-## 📺 演示
-
-<video src="https://github.com/user-attachments/assets/2b82a9d4-7799-4625-a140-2a48845b2e4a" autoplay muted loop playsinline controls width="100%" height="auto"></video>
 
 ## 🚀 快速开始
 
@@ -54,25 +51,6 @@ AI 会自动调用工具完成生成。
 
 **图片链接时效性**：本项目使用火山引擎原始 API，生成的图片链接通常在 24 小时后失效。如果你需要长期保存图片，请及时下载到本地。
 
-## 🔄 两种使用方式
-
-你可以根据自己的需求选择：
-
-### 方式一：本地运行 🔧
-- 需要自己申请火山引擎 API key
-- 图片链接 24 小时后失效，需下载到本地使用。
-
-### 方式二：云端版本 ✨
-- ✅ 无需申请 API key，开箱即用
-- ✅ 图片支持永久存储在 CDN
-- ✅ 支持 webp 压缩、背景移除、快速并发生成多张图片等功能
-- ✅ 提供一定的免费额度
-- ✅ 量大时价格更优惠
-
-👉 了解云端版本：[https://mcp.pixelark.art](https://mcp.pixelark.art)
-
----
-
 
 ## 🛠️ 开发
 
@@ -88,12 +66,8 @@ bun install
 bun run src/index.ts --ark-key=YOUR_API_KEY
 ```
 
-## 📄 许可证
-
-MIT
 
 ## 🔗 相关链接
 
-- [云端版本](https://mcp.pixelark.art)
 - [火山引擎 SeeDream](https://www.volcengine.com/docs/ark/doubao-seedream)
 - [MCP 协议](https://modelcontextprotocol.io)

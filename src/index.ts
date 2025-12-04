@@ -65,17 +65,17 @@ server.registerTool(
           `图片尺寸，格式为 WIDTHxHEIGHT，默认 2560x1440
 
 常用尺寸参考：
-- 21:9 超宽屏: 3024x1296
-- 16:9 横屏: 2560x1440
-- 4:3 传统: 2304x1728
-- 1:1 方形: 2048x2048
-- 3:4 竖屏: 1728x2304
-- 9:16 手机: 1440x2560`,
+- 21:9 超宽屏：3024x1296
+- 16:9 横屏：2560x1440
+- 4:3 传统：2304x1728
+- 1:1 方形：2048x2048
+- 3:4 竖屏：1728x2304
+- 9:16 手机：1440x2560`,
         ),
       watermark: z
         .boolean()
         .optional()
-        .describe("是否添加AI生成水印，默认为 false"),
+        .describe("是否添加 AI 生成水印，默认为 false"),
       images: z
         .array(z.string())
         .optional()
@@ -105,13 +105,7 @@ server.registerTool(
         content: [
           {
             type: "text",
-            text: `✅ 图片生成成功！
-
-🖼️  图片URL: ${result.tempUri}
-
-⚠️  重要提示：
-此链接通常在 24 小时后失效，如需长期使用请及时保存到本地（可以通过curl）。
-如果你需要永久链接，可以考虑使用云端版本：https://mcp.pixelark.art`,
+            text: `✅ 图片生成成功！🖼️  图片 URL: ${result.tempUri}`,
           },
         ],
         structuredContent: output,
@@ -122,13 +116,7 @@ server.registerTool(
       content: [
         {
           type: "text",
-          text: `❌ 图片生成失败: ${result.error}
-
-💡 遇到问题？试试商业版：
-- 无需自己申请 API key
-- 更稳定的服务和技术支持
-- 注册即送 30 张免费额度
-👉 https://mcp.pixelark.art`,
+          text: `❌ 图片生成失败：${result.error}`,
         },
       ],
       structuredContent: output,
